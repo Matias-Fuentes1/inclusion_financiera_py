@@ -12,4 +12,22 @@ Este proyecto usa los **microdatos individuales** de la encuesta Global Findex d
 
 ## Dónde ubicarlo
 
-Una vez descargado, colocá el archivo dentro de esta carpeta (`data/`) con el siguiente nombre, que es el que espera el notebook:
+Una vez descargado, colocá el archivo dentro de esta carpeta (`data/`) con el siguiente nombre, que es el que espera el notebook: data/findex_microdata_2025_labelled_update112425.csv
+
+Si tu archivo se llama distinto, renombralo o ajustá la variable `file_path` en la primera celda de carga de datos del notebook.
+
+## Variables relevantes usadas en el análisis
+
+| Variable | Descripción |
+|---|---|
+| `economy` | País de la persona encuestada (se filtra por "Brazil") |
+| `age` | Edad del encuestado |
+| `saved` | Si ahorró en el último año (1 = Sí, 2 = No) |
+| `female` | Género (1 = Mujer, 2 = Hombre) |
+| `inc_q` | Quintil de ingreso del hogar (1 = más pobre, 5 = más rico) |
+| `account_mob` | Posesión de cuenta de dinero móvil / billetera digital (0 = No, 1 = Sí) |
+| `wgt` | Factor de expansión poblacional (obligatorio para cualquier cálculo de tasas representativas) |
+
+## Nota
+
+No subas el CSV completo al repositorio. El archivo de microdatos pesa varios MB y no aporta valor versionarlo — cualquiera puede reproducir el análisis descargándolo desde la fuente oficial siguiendo los pasos de arriba.
